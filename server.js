@@ -26,11 +26,11 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", (req, res) => {
+  console.log(req.ip);
   res.json({
-    ippaddress: req.ip.split(':').at(-1),
     language: req.headers['accept-language'],
     software: req.get('User-Agent'),
-  })
+  });
 });
 
 // listen for requests :)
