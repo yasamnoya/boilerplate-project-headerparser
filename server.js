@@ -29,7 +29,7 @@ app.get("/api/whoami", (req, res) => {
   console.log(req.ip)
   console.log(typeof(req.ip))
   res.json({
-    ippaddress: req.ip.split(':').at(-1),
+    ipaddress: req.ip.split(':').at(-1),
     language: req.headers['accept-language'],
     software: req.get('User-Agent'),
   })
